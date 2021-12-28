@@ -5,6 +5,8 @@ ThisBuild / scalaVersion := "3.1.0"
 //version := "0.1"
 //scalaVersion := "3.1.0"
 val scalaTestLibrary = "org.scalatest" % "scalatest_2.12" % "3.1.0"
+val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.15.4"
+val scalaMeta = "org.scalameta" %% "munit" % "0.7.26" % Test
 
 lazy val root = (project in file("."))
   .aggregate(`scala-functional-program-design`)
@@ -15,5 +17,5 @@ lazy val root = (project in file("."))
 
 lazy val `scala-functional-program-design` = (project in file("./scala-functional-program-design"))
   .settings(libraryDependencies ++= {
-    Seq(scalaTestLibrary)
+    Seq(scalaTestLibrary, scalaCheck, scalaMeta)
   })

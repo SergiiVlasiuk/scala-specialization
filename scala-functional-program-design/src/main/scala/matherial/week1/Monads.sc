@@ -10,16 +10,18 @@ extension [T](xo: Option[T])
     case None => None
 
 // show left unit law
-
+/*
 Some(x).flatMap(f) == f(x)
 Some(x) match
   case Some(x) => f(x) // the law holds
   case None => None
+*/
 
 // show right unit law
+/*
 opt flatMap Some == opt
 opt match {
   case Some(x) => Some(x)
     ...
 } == opt
-
+*/
